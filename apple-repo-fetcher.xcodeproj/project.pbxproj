@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */; };
+		814A057A2A408FA0009C9EB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05792A408FA0009C9EB4 /* ContentView.swift */; };
+		814A057C2A408FA3009C9EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814A057B2A408FA3009C9EB4 /* Assets.xcassets */; };
+		814A057F2A408FA3009C9EB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814A057E2A408FA3009C9EB4 /* Preview Assets.xcassets */; };
+		814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */; };
+		814A05932A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05922A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift */; };
+		814A05952A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05942A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		814A05852A408FA3009C9EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 814A056C2A408FA0009C9EB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 814A05732A408FA0009C9EB4;
+			remoteInfo = "apple-repo-fetcher";
+		};
+		814A058F2A408FA3009C9EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 814A056C2A408FA0009C9EB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 814A05732A408FA0009C9EB4;
+			remoteInfo = "apple-repo-fetcher";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-repo-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherApp.swift; sourceTree = "<group>"; };
+		814A05792A408FA0009C9EB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		814A057B2A408FA3009C9EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		814A057E2A408FA3009C9EB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		814A05842A408FA3009C9EB4 /* apple-repo-fetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apple-repo-fetcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherTests.swift; sourceTree = "<group>"; };
+		814A058E2A408FA3009C9EB4 /* apple-repo-fetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apple-repo-fetcherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		814A05922A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherUITests.swift; sourceTree = "<group>"; };
+		814A05942A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		814A05712A408FA0009C9EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814A05812A408FA3009C9EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814A058B2A408FA3009C9EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		814A056B2A408FA0009C9EB4 = {
+			isa = PBXGroup;
+			children = (
+				814A05762A408FA0009C9EB4 /* apple-repo-fetcher */,
+				814A05872A408FA3009C9EB4 /* apple-repo-fetcherTests */,
+				814A05912A408FA3009C9EB4 /* apple-repo-fetcherUITests */,
+				814A05752A408FA0009C9EB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		814A05752A408FA0009C9EB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */,
+				814A05842A408FA3009C9EB4 /* apple-repo-fetcherTests.xctest */,
+				814A058E2A408FA3009C9EB4 /* apple-repo-fetcherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		814A05762A408FA0009C9EB4 /* apple-repo-fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */,
+				814A05792A408FA0009C9EB4 /* ContentView.swift */,
+				814A057B2A408FA3009C9EB4 /* Assets.xcassets */,
+				814A057D2A408FA3009C9EB4 /* Preview Content */,
+			);
+			path = "apple-repo-fetcher";
+			sourceTree = "<group>";
+		};
+		814A057D2A408FA3009C9EB4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				814A057E2A408FA3009C9EB4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		814A05872A408FA3009C9EB4 /* apple-repo-fetcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */,
+			);
+			path = "apple-repo-fetcherTests";
+			sourceTree = "<group>";
+		};
+		814A05912A408FA3009C9EB4 /* apple-repo-fetcherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				814A05922A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift */,
+				814A05942A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift */,
+			);
+			path = "apple-repo-fetcherUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		814A05732A408FA0009C9EB4 /* apple-repo-fetcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 814A05982A408FA3009C9EB4 /* Build configuration list for PBXNativeTarget "apple-repo-fetcher" */;
+			buildPhases = (
+				814A05702A408FA0009C9EB4 /* Sources */,
+				814A05712A408FA0009C9EB4 /* Frameworks */,
+				814A05722A408FA0009C9EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "apple-repo-fetcher";
+			productName = "apple-repo-fetcher";
+			productReference = 814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		814A05832A408FA3009C9EB4 /* apple-repo-fetcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 814A059B2A408FA3009C9EB4 /* Build configuration list for PBXNativeTarget "apple-repo-fetcherTests" */;
+			buildPhases = (
+				814A05802A408FA3009C9EB4 /* Sources */,
+				814A05812A408FA3009C9EB4 /* Frameworks */,
+				814A05822A408FA3009C9EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				814A05862A408FA3009C9EB4 /* PBXTargetDependency */,
+			);
+			name = "apple-repo-fetcherTests";
+			productName = "apple-repo-fetcherTests";
+			productReference = 814A05842A408FA3009C9EB4 /* apple-repo-fetcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		814A058D2A408FA3009C9EB4 /* apple-repo-fetcherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 814A059E2A408FA3009C9EB4 /* Build configuration list for PBXNativeTarget "apple-repo-fetcherUITests" */;
+			buildPhases = (
+				814A058A2A408FA3009C9EB4 /* Sources */,
+				814A058B2A408FA3009C9EB4 /* Frameworks */,
+				814A058C2A408FA3009C9EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				814A05902A408FA3009C9EB4 /* PBXTargetDependency */,
+			);
+			name = "apple-repo-fetcherUITests";
+			productName = "apple-repo-fetcherUITests";
+			productReference = 814A058E2A408FA3009C9EB4 /* apple-repo-fetcherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		814A056C2A408FA0009C9EB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					814A05732A408FA0009C9EB4 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					814A05832A408FA3009C9EB4 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 814A05732A408FA0009C9EB4;
+					};
+					814A058D2A408FA3009C9EB4 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 814A05732A408FA0009C9EB4;
+					};
+				};
+			};
+			buildConfigurationList = 814A056F2A408FA0009C9EB4 /* Build configuration list for PBXProject "apple-repo-fetcher" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 814A056B2A408FA0009C9EB4;
+			productRefGroup = 814A05752A408FA0009C9EB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				814A05732A408FA0009C9EB4 /* apple-repo-fetcher */,
+				814A05832A408FA3009C9EB4 /* apple-repo-fetcherTests */,
+				814A058D2A408FA3009C9EB4 /* apple-repo-fetcherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		814A05722A408FA0009C9EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814A057F2A408FA3009C9EB4 /* Preview Assets.xcassets in Resources */,
+				814A057C2A408FA3009C9EB4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814A05822A408FA3009C9EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814A058C2A408FA3009C9EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		814A05702A408FA0009C9EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814A057A2A408FA0009C9EB4 /* ContentView.swift in Sources */,
+				814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814A05802A408FA3009C9EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814A058A2A408FA3009C9EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814A05932A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift in Sources */,
+				814A05952A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		814A05862A408FA3009C9EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 814A05732A408FA0009C9EB4 /* apple-repo-fetcher */;
+			targetProxy = 814A05852A408FA3009C9EB4 /* PBXContainerItemProxy */;
+		};
+		814A05902A408FA3009C9EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 814A05732A408FA0009C9EB4 /* apple-repo-fetcher */;
+			targetProxy = 814A058F2A408FA3009C9EB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		814A05962A408FA3009C9EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		814A05972A408FA3009C9EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		814A05992A408FA3009C9EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"apple-repo-fetcher/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anmar.hizber.apple-repo-fetcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		814A059A2A408FA3009C9EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"apple-repo-fetcher/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anmar.hizber.apple-repo-fetcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		814A059C2A408FA3009C9EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anmar.hizber.apple-repo-fetcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apple-repo-fetcher.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/apple-repo-fetcher";
+			};
+			name = Debug;
+		};
+		814A059D2A408FA3009C9EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anmar.hizber.apple-repo-fetcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apple-repo-fetcher.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/apple-repo-fetcher";
+			};
+			name = Release;
+		};
+		814A059F2A408FA3009C9EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anmar.hizber.apple-repo-fetcherUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "apple-repo-fetcher";
+			};
+			name = Debug;
+		};
+		814A05A02A408FA3009C9EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anmar.hizber.apple-repo-fetcherUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "apple-repo-fetcher";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		814A056F2A408FA0009C9EB4 /* Build configuration list for PBXProject "apple-repo-fetcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814A05962A408FA3009C9EB4 /* Debug */,
+				814A05972A408FA3009C9EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		814A05982A408FA3009C9EB4 /* Build configuration list for PBXNativeTarget "apple-repo-fetcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814A05992A408FA3009C9EB4 /* Debug */,
+				814A059A2A408FA3009C9EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		814A059B2A408FA3009C9EB4 /* Build configuration list for PBXNativeTarget "apple-repo-fetcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814A059C2A408FA3009C9EB4 /* Debug */,
+				814A059D2A408FA3009C9EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		814A059E2A408FA3009C9EB4 /* Build configuration list for PBXNativeTarget "apple-repo-fetcherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814A059F2A408FA3009C9EB4 /* Debug */,
+				814A05A02A408FA3009C9EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 814A056C2A408FA0009C9EB4 /* Project object */;
+}
