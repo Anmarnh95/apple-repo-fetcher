@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */; };
-		814A057A2A408FA0009C9EB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05792A408FA0009C9EB4 /* ContentView.swift */; };
+		814A057A2A408FA0009C9EB4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05792A408FA0009C9EB4 /* MainView.swift */; };
 		814A057C2A408FA3009C9EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814A057B2A408FA3009C9EB4 /* Assets.xcassets */; };
-		814A057F2A408FA3009C9EB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814A057E2A408FA3009C9EB4 /* Preview Assets.xcassets */; };
 		814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */; };
-		814A05932A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05922A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift */; };
-		814A05952A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05942A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift */; };
+		814A05A82A4095A9009C9EB4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A72A4095A9009C9EB4 /* AppState.swift */; };
+		814A05AA2A40978E009C9EB4 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A92A40978E009C9EB4 /* GitRepository.swift */; };
+		814A05AC2A409981009C9EB4 /* LoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AB2A409981009C9EB4 /* LoadedView.swift */; };
+		814A05AE2A4099EF009C9EB4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AD2A4099EF009C9EB4 /* ErrorView.swift */; };
+		814A05B02A409ABD009C9EB4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AF2A409ABD009C9EB4 /* MainViewModel.swift */; };
+		8158E54E2A42FFE900ED5E03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54D2A42FFE900ED5E03 /* API.swift */; };
+		8158E5512A43035700ED5E03 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54F2A43035200ED5E03 /* MockAPI.swift */; };
+		8158E5522A43035B00ED5E03 /* MockRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C749A2A41CF14008162B0 /* MockRepositories.swift */; };
+		8158E5542A43036000ED5E03 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54F2A43035200ED5E03 /* MockAPI.swift */; };
+		8158E5552A43037D00ED5E03 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AF2A409ABD009C9EB4 /* MainViewModel.swift */; };
+		8158E5562A43038300ED5E03 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A92A40978E009C9EB4 /* GitRepository.swift */; };
+		8158E5572A43038800ED5E03 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A72A4095A9009C9EB4 /* AppState.swift */; };
+		8158E5592A43057500ED5E03 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E5582A43057500ED5E03 /* NetworkError.swift */; };
+		8158E55A2A43086A00ED5E03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54D2A42FFE900ED5E03 /* API.swift */; };
+		8158E55B2A43087800ED5E03 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E5582A43057500ED5E03 /* NetworkError.swift */; };
+		8158E55D2A4318CF00ED5E03 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8158E55C2A4318CF00ED5E03 /* README.md */; };
+		819C74962A41AE6B008162B0 /* ApplePublicReposAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74952A41AE6B008162B0 /* ApplePublicReposAPI.swift */; };
+		819C74982A41C646008162B0 /* ListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74972A41C646008162B0 /* ListEntry.swift */; };
+		819C749B2A41CF14008162B0 /* MockRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C749A2A41CF14008162B0 /* MockRepositories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +52,23 @@
 /* Begin PBXFileReference section */
 		814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-repo-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherApp.swift; sourceTree = "<group>"; };
-		814A05792A408FA0009C9EB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		814A05792A408FA0009C9EB4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		814A057B2A408FA3009C9EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		814A057E2A408FA3009C9EB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		814A05842A408FA3009C9EB4 /* apple-repo-fetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apple-repo-fetcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherTests.swift; sourceTree = "<group>"; };
 		814A058E2A408FA3009C9EB4 /* apple-repo-fetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apple-repo-fetcherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		814A05922A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherUITests.swift; sourceTree = "<group>"; };
-		814A05942A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		814A05A72A4095A9009C9EB4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		814A05A92A40978E009C9EB4 /* GitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepository.swift; sourceTree = "<group>"; };
+		814A05AB2A409981009C9EB4 /* LoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedView.swift; sourceTree = "<group>"; };
+		814A05AD2A4099EF009C9EB4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		814A05AF2A409ABD009C9EB4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8158E54D2A42FFE900ED5E03 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8158E54F2A43035200ED5E03 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		8158E5582A43057500ED5E03 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8158E55C2A4318CF00ED5E03 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		819C74952A41AE6B008162B0 /* ApplePublicReposAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePublicReposAPI.swift; sourceTree = "<group>"; };
+		819C74972A41C646008162B0 /* ListEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntry.swift; sourceTree = "<group>"; };
+		819C749A2A41CF14008162B0 /* MockRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +101,6 @@
 			children = (
 				814A05762A408FA0009C9EB4 /* apple-repo-fetcher */,
 				814A05872A408FA3009C9EB4 /* apple-repo-fetcherTests */,
-				814A05912A408FA3009C9EB4 /* apple-repo-fetcherUITests */,
 				814A05752A408FA0009C9EB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,19 +119,15 @@
 			isa = PBXGroup;
 			children = (
 				814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */,
-				814A05792A408FA0009C9EB4 /* ContentView.swift */,
+				8158E55C2A4318CF00ED5E03 /* README.md */,
+				819C74992A41CEF4008162B0 /* Mocks */,
+				814A05A42A4094F9009C9EB4 /* Networking */,
+				814A05A32A4094E3009C9EB4 /* Model */,
+				814A05A22A4094CE009C9EB4 /* ViewModel */,
+				814A05A12A4093B5009C9EB4 /* Views */,
 				814A057B2A408FA3009C9EB4 /* Assets.xcassets */,
-				814A057D2A408FA3009C9EB4 /* Preview Content */,
 			);
 			path = "apple-repo-fetcher";
-			sourceTree = "<group>";
-		};
-		814A057D2A408FA3009C9EB4 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				814A057E2A408FA3009C9EB4 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		814A05872A408FA3009C9EB4 /* apple-repo-fetcherTests */ = {
@@ -118,13 +138,51 @@
 			path = "apple-repo-fetcherTests";
 			sourceTree = "<group>";
 		};
-		814A05912A408FA3009C9EB4 /* apple-repo-fetcherUITests */ = {
+		814A05A12A4093B5009C9EB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				814A05922A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift */,
-				814A05942A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift */,
+				814A05792A408FA0009C9EB4 /* MainView.swift */,
+				814A05AB2A409981009C9EB4 /* LoadedView.swift */,
+				819C74972A41C646008162B0 /* ListEntry.swift */,
+				814A05AD2A4099EF009C9EB4 /* ErrorView.swift */,
 			);
-			path = "apple-repo-fetcherUITests";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		814A05A22A4094CE009C9EB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				814A05AF2A409ABD009C9EB4 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		814A05A32A4094E3009C9EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				814A05A72A4095A9009C9EB4 /* AppState.swift */,
+				8158E5582A43057500ED5E03 /* NetworkError.swift */,
+				814A05A92A40978E009C9EB4 /* GitRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		814A05A42A4094F9009C9EB4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				819C74952A41AE6B008162B0 /* ApplePublicReposAPI.swift */,
+				8158E54D2A42FFE900ED5E03 /* API.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		819C74992A41CEF4008162B0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				819C749A2A41CF14008162B0 /* MockRepositories.swift */,
+				8158E54F2A43035200ED5E03 /* MockAPI.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814A057F2A408FA3009C9EB4 /* Preview Assets.xcassets in Resources */,
+				8158E55D2A4318CF00ED5E03 /* README.md in Resources */,
 				814A057C2A408FA3009C9EB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +315,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814A057A2A408FA0009C9EB4 /* ContentView.swift in Sources */,
+				8158E54E2A42FFE900ED5E03 /* API.swift in Sources */,
+				814A057A2A408FA0009C9EB4 /* MainView.swift in Sources */,
+				814A05AE2A4099EF009C9EB4 /* ErrorView.swift in Sources */,
+				814A05A82A4095A9009C9EB4 /* AppState.swift in Sources */,
+				8158E5512A43035700ED5E03 /* MockAPI.swift in Sources */,
+				814A05B02A409ABD009C9EB4 /* MainViewModel.swift in Sources */,
+				814A05AC2A409981009C9EB4 /* LoadedView.swift in Sources */,
+				819C749B2A41CF14008162B0 /* MockRepositories.swift in Sources */,
 				814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */,
+				814A05AA2A40978E009C9EB4 /* GitRepository.swift in Sources */,
+				8158E5592A43057500ED5E03 /* NetworkError.swift in Sources */,
+				819C74962A41AE6B008162B0 /* ApplePublicReposAPI.swift in Sources */,
+				819C74982A41C646008162B0 /* ListEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +336,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */,
+				8158E55B2A43087800ED5E03 /* NetworkError.swift in Sources */,
+				8158E5562A43038300ED5E03 /* GitRepository.swift in Sources */,
+				8158E5542A43036000ED5E03 /* MockAPI.swift in Sources */,
+				8158E5572A43038800ED5E03 /* AppState.swift in Sources */,
+				8158E5522A43035B00ED5E03 /* MockRepositories.swift in Sources */,
+				8158E5552A43037D00ED5E03 /* MainViewModel.swift in Sources */,
+				8158E55A2A43086A00ED5E03 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814A05932A408FA3009C9EB4 /* apple_repo_fetcherUITests.swift in Sources */,
-				814A05952A408FA3009C9EB4 /* apple_repo_fetcherUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"apple-repo-fetcher/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -444,7 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"apple-repo-fetcher/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

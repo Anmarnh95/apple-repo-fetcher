@@ -1,36 +1,37 @@
-//
-//  apple_repo_fetcherTests.swift
-//  apple-repo-fetcherTests
-//
-//  Created by Anmar Hizber on 19.06.23.
-//
-
 import XCTest
 @testable import apple_repo_fetcher
 
 final class apple_repo_fetcherTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testStartUpState() throws {
+        let viewModel = MainViewModel(api: mockAPI(returnKind: .values))
+        XCTAssertEqual(viewModel.appState, AppState.loading)
+        XCTAssertTrue(viewModel.repos.isEmpty)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testAfterFetchState() throws {
+        let viewModel = MainViewModel(api: mockAPI(returnKind: .values))
+        viewModel.startLoading()
+        let pred = NSPredicate { viewModel, _ in
+            ((viewModel as? MainViewModel)?.appState) != AppState.loading
+            
         }
+        let expectation = XCTNSPredicateExpectation(predicate: pred, object: viewModel)
+        self.wait(for: [expectation], timeout: 10)
+        XCTAssertEqual(viewModel.appState, AppState.loaded)
+        XCTAssertFalse(viewModel.repos.isEmpty)
+    }
+    
+    func testFailureState() throws {
+        let viewModel = MainViewModel(api: mockAPI(returnKind: .error))
+        viewModel.startLoading()
+        let pred = NSPredicate { viewModel, _ in
+            ((viewModel as? MainViewModel)?.appState) != AppState.loading
+        }
+        let expectation = XCTNSPredicateExpectation(predicate: pred, object: viewModel)
+        self.wait(for: [expectation], timeout: 10)
+        XCTAssertEqual(viewModel.appState, AppState.error("Decoding Error: Unable to decode backend response"))
+        XCTAssertTrue(viewModel.repos.isEmpty)
     }
 
 }

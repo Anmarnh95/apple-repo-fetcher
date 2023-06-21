@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ED159BA2-4298-42D6-B153-BCC46720B1DF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E090656-3296-40BB-855E-92356B282DA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apple-repo-fetcher/Networking/GitHubAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "fetchRepositories()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4E090656-3296-40BB-855E-92356B282DA2 - a3b82d42be4ea65d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apple_repo_fetcher.GitHubAPI.fetchRepositories() -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;apple_repo_fetcher.GitRepository&gt;, Swift.Error&gt;"
+                  moduleName = "apple-repo-fetcher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anmarhizber/Documents/apple-repo-fetcher/apple-repo-fetcher/Networking/GitHubAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "4E090656-3296-40BB-855E-92356B282DA2 - a3b82d42be4ea65d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "apple_repo_fetcher.GitHubAPI.fetchRepositories() -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;apple_repo_fetcher.GitRepository&gt;, Swift.Error&gt;"
+                  moduleName = "apple-repo-fetcher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anmarhizber/Documents/apple-repo-fetcher/apple-repo-fetcher/Networking/GitHubAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "634">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4801CC9-3F34-4A63-AEAB-06D6C48459FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apple-repo-fetcher/Networking/GitHubAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchRepositories()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D4801CC9-3F34-4A63-AEAB-06D6C48459FF - c9c916147eefe04e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in apple_repo_fetcher.GitHubAPI.fetchRepositories() -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;apple_repo_fetcher.GitRepository&gt;, Swift.Error&gt;"
+                  moduleName = "apple-repo-fetcher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anmarhizber/Documents/apple-repo-fetcher/apple-repo-fetcher/Networking/GitHubAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "721">
+               </Location>
+               <Location
+                  uuid = "D4801CC9-3F34-4A63-AEAB-06D6C48459FF - c9c916147eefe04e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in apple_repo_fetcher.GitHubAPI.fetchRepositories() -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;apple_repo_fetcher.GitRepository&gt;, Swift.Error&gt;"
+                  moduleName = "apple-repo-fetcher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anmarhizber/Documents/apple-repo-fetcher/apple-repo-fetcher/Networking/GitHubAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "773">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9DE87B5-7427-4813-8205-DA8D3BD488C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apple-repo-fetcher/Networking/GitHubAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchRepositories()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
