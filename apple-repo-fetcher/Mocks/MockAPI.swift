@@ -4,7 +4,7 @@ import Combine
 final class mockAPI:API {
     
     private var returnError: NetworkError = .decodingError
-    private var returnValues: [GitRepository] = MockRepositories.mocks
+    private var returnValues: [GHListRepository] = MockRepositories.mocks
     
     
     public var returnKind: neededReturnKind
@@ -13,7 +13,7 @@ final class mockAPI:API {
         self.returnKind = returnKind
     }
     
-    func fetchRepositories() -> AnyPublisher<[GitRepository], NetworkError> {
+    func fetchRepositories() -> AnyPublisher<[GHListRepository], NetworkError> {
         switch returnKind {
         case .error:
             return Fail(error: returnError).eraseToAnyPublisher()

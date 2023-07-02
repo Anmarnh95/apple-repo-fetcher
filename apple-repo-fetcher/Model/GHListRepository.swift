@@ -1,7 +1,7 @@
 import Foundation
 
 /// A struct used to decode backend response.
-struct GitHubRepository: Codable, Identifiable {
+struct GHListRepository: Codable, Identifiable {
     let id: Int
     let name: String
     let description: String?
@@ -14,6 +14,7 @@ struct GitHubRepository: Codable, Identifiable {
         case createdAt = "created_at"
     }
     
+    // Initializer Used to create mock objects
     init(id: Int, name: String, description: String?, favorites: Int, createdAt: String) {
         self.id = id
         self.name = name

@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		80E22ACB2A515F3C00F43D16 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACA2A515F3C00F43D16 /* ItemViewModel.swift */; };
 		80E22ACC2A5161B800F43D16 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACA2A515F3C00F43D16 /* ItemViewModel.swift */; };
+		80E22ACE2A51646F00F43D16 /* GHFullRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */; };
 		814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */; };
 		814A057A2A408FA0009C9EB4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05792A408FA0009C9EB4 /* MainView.swift */; };
 		814A057C2A408FA3009C9EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814A057B2A408FA3009C9EB4 /* Assets.xcassets */; };
 		814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */; };
 		814A05A82A4095A9009C9EB4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A72A4095A9009C9EB4 /* AppState.swift */; };
-		814A05AA2A40978E009C9EB4 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A92A40978E009C9EB4 /* GitRepository.swift */; };
+		814A05AA2A40978E009C9EB4 /* GHListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A92A40978E009C9EB4 /* GHListRepository.swift */; };
 		814A05AC2A409981009C9EB4 /* LoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AB2A409981009C9EB4 /* LoadedView.swift */; };
 		814A05AE2A4099EF009C9EB4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AD2A4099EF009C9EB4 /* ErrorView.swift */; };
 		814A05B02A409ABD009C9EB4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AF2A409ABD009C9EB4 /* ListViewModel.swift */; };
@@ -23,7 +24,7 @@
 		8158E5522A43035B00ED5E03 /* MockRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C749A2A41CF14008162B0 /* MockRepositories.swift */; };
 		8158E5542A43036000ED5E03 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54F2A43035200ED5E03 /* MockAPI.swift */; };
 		8158E5552A43037D00ED5E03 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AF2A409ABD009C9EB4 /* ListViewModel.swift */; };
-		8158E5562A43038300ED5E03 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A92A40978E009C9EB4 /* GitRepository.swift */; };
+		8158E5562A43038300ED5E03 /* GHListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A92A40978E009C9EB4 /* GHListRepository.swift */; };
 		8158E5572A43038800ED5E03 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A72A4095A9009C9EB4 /* AppState.swift */; };
 		8158E5592A43057500ED5E03 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E5582A43057500ED5E03 /* NetworkError.swift */; };
 		8158E55A2A43086A00ED5E03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54D2A42FFE900ED5E03 /* API.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		80E22ACA2A515F3C00F43D16 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFullRepository.swift; sourceTree = "<group>"; };
 		814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-repo-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherApp.swift; sourceTree = "<group>"; };
 		814A05792A408FA0009C9EB4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		814A05842A408FA3009C9EB4 /* apple-repo-fetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apple-repo-fetcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherTests.swift; sourceTree = "<group>"; };
 		814A05A72A4095A9009C9EB4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		814A05A92A40978E009C9EB4 /* GitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepository.swift; sourceTree = "<group>"; };
+		814A05A92A40978E009C9EB4 /* GHListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHListRepository.swift; sourceTree = "<group>"; };
 		814A05AB2A409981009C9EB4 /* LoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedView.swift; sourceTree = "<group>"; };
 		814A05AD2A4099EF009C9EB4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		814A05AF2A409ABD009C9EB4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -147,7 +149,8 @@
 			children = (
 				814A05A72A4095A9009C9EB4 /* AppState.swift */,
 				8158E5582A43057500ED5E03 /* NetworkError.swift */,
-				814A05A92A40978E009C9EB4 /* GitRepository.swift */,
+				814A05A92A40978E009C9EB4 /* GHListRepository.swift */,
+				80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,9 +282,10 @@
 				814A05AC2A409981009C9EB4 /* LoadedView.swift in Sources */,
 				819C749B2A41CF14008162B0 /* MockRepositories.swift in Sources */,
 				814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */,
-				814A05AA2A40978E009C9EB4 /* GitRepository.swift in Sources */,
+				814A05AA2A40978E009C9EB4 /* GHListRepository.swift in Sources */,
 				8158E5592A43057500ED5E03 /* NetworkError.swift in Sources */,
 				819C74962A41AE6B008162B0 /* ApplePublicReposAPI.swift in Sources */,
+				80E22ACE2A51646F00F43D16 /* GHFullRepository.swift in Sources */,
 				819C74982A41C646008162B0 /* ListEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +296,7 @@
 			files = (
 				814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */,
 				8158E55B2A43087800ED5E03 /* NetworkError.swift in Sources */,
-				8158E5562A43038300ED5E03 /* GitRepository.swift in Sources */,
+				8158E5562A43038300ED5E03 /* GHListRepository.swift in Sources */,
 				8158E5542A43036000ED5E03 /* MockAPI.swift in Sources */,
 				8158E5572A43038800ED5E03 /* AppState.swift in Sources */,
 				80E22ACC2A5161B800F43D16 /* ItemViewModel.swift in Sources */,

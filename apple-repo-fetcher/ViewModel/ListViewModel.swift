@@ -6,7 +6,7 @@ final class ListViewModel: ObservableObject{
     var cancellableSet: Set<AnyCancellable> = []
     
     @Published public private(set) var appState: AppState
-    @Published public private(set) var repos: [GitRepository] = []
+    @Published public private(set) var repos: [GHListRepository] = []
     
     @Published public private(set) var itemViewModel: ItemViewModel? = nil
     

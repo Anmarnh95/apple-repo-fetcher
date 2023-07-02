@@ -3,7 +3,7 @@ import SwiftUI
 /// Used to describe an GitRepository instance, so it could be shown in the list in LoadedView.
 struct ListItem: View {
     
-    let repository: GitRepository
+    let repository: GHListRepository
     
     var body: some View {
         HStack {

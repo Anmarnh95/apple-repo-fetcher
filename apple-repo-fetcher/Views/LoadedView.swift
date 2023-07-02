@@ -3,7 +3,7 @@ import SwiftUI
 /// LoadedView shows the list of GitRepository. 
 struct LoadedView: View {
     
-    var repos: [GitRepository] = []
+    var repos: [GHListRepository] = []
     var onRefresh: ()->Void = {}
     
     var body: some View {
