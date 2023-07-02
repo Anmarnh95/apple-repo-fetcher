@@ -1,11 +1,11 @@
 import Foundation
 import Combine
 
-final class ListViewModel: ObservableObject{
+final class ListViewModel: ObservableObject, ViewModel{
     
     var cancellableSet: Set<AnyCancellable> = []
     
-    @Published public private(set) var appState: AppState
+    @Published public internal(set) var state: State
     @Published public private(set) var repos: [GHListRepository] = []
     
     @Published public private(set) var itemViewModel: ItemViewModel? = nil
@@ -14,7 +14,7 @@ final class ListViewModel: ObservableObject{
     
     /// When the App starts, the initial state is "loading". When an array of GitRepository is successfully fetched from backend, the state will turn to "loaded".
     init(api: API) {
-        self.appState = .loading
+        self.state = .loading
         self.api = api
     }
     
@@ -28,12 +28,12 @@ final class ListViewModel: ObservableObject{
                 case .finished:
                     print("ListViewModel: Successfully finished")
                     // Success, change state to loaded
-                    self.appState = .loaded
+                    self.state = .loaded
                     break
                 case .failure(let error):
                     print("ListViewModel: Finished with failure")
                     // failure, change state to error
-                    self.appState = .error(error.localizedDescription)
+                    self.state = .error(error.localizedDescription)
                 }
             }, receiveValue: { repositories in
                 print("ListViewModel: Repos updated")

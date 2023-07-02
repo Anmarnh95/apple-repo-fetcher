@@ -1,43 +1,44 @@
 import SwiftUI
 
-/// Used to describe an GitRepository instance, so it could be shown in the list in LoadedView.
+/// LoadedView shows the list of GitRepository. 
 struct RepositoryListView: View {
     
-    let repository: GHListRepository
+    var repos: [GHListRepository] = []
+    var onRefresh: ()->Void = {}
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading){
-                Text(repository.name)
-                    .foregroundColor(.blue)
-                    .font(.title2)
-                Text(repository.description ?? "")
-                    .font(.body)
-                Text(repository.createdAt)
-                    .foregroundColor(.gray)
-                    .font(.caption)
-            }
-            Spacer()
-            VStack(alignment: .trailing) {
-                Spacer()
-                HStack(alignment: .bottom, spacing: 0){
-                    Text("\(repository.favorites)")
-                        .foregroundColor(.gray)
-                        .font(.caption)
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                        .imageScale(.small)
+        
+        if repos.isEmpty {
+            Text("No available Repos")
+                .navigationTitle("Apple Repositories")
+        } else {
+            NavigationStack {
+                List {
+                    ForEach(repos) { repo in
+                        NavigationLink(value: repo) {
+                            RepositoryListItemView(repository: repo)
+                        }
+                    }
                 }
+                .navigationDestination(for: GHListRepository.self){ repo in
+                    let itemViewModel = ItemViewModel(api: ApplePublicReposAPI(), repositoryName: repo.name)
+                    
+                    LoadableView(viewModel: itemViewModel, errorTitle: "\(repo.name)"){
+                        RepositoryPageView(repository: itemViewModel.repository!)
+                    }
+                }
+                .refreshable {
+                    onRefresh()
+                }
+                .listStyle(.plain)
             }
+            .navigationTitle("Apple Repositories")
         }
     }
 }
 
-struct ListEntry_Previews: PreviewProvider {
+struct LoadedView_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryListView(repository: Mocks.mockRepositoryList[1])
-            .previewLayout(.fixed(width: 300, height: 70))
-        RepositoryListView(repository:Mocks.mockRepositoryList[4])
-            .previewLayout(.fixed(width: 300, height: 100))
+        RepositoryListView(repos: Mocks.mockRepositoryList, onRefresh: {})
     }
 }

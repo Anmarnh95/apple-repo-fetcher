@@ -1,18 +1,21 @@
 import Foundation
 import Combine
 
-final class ItemViewModel: ObservableObject {
+final class ItemViewModel: ObservableObject, ViewModel {
     
     var cancellableSet: Set<AnyCancellable> = []
+
+    @Published private(set) var repository: GHFullRepository? = nil
+    @Published public internal(set) var state: State
     
     private let api: API
-    private let repositoryName: String
+    let repositoryName: String
     
-    @Published private(set) var repository: GHFullRepository? = nil
-    
+
     init(api: API, repositoryName: String) {
         self.repositoryName = repositoryName
         self.api = api
+        self.state = .loading
     }
     
     public func startLoading() -> Void {
@@ -24,10 +27,12 @@ final class ItemViewModel: ObservableObject {
                 case .finished:
                     print("ItemViewModel: Successfully finished")
                     // Success, change state to loaded
+                    self.state = .loaded
                     break
                 case .failure(let error):
                     print("ItemViewModel: Finished with failure")
                     // failure, change state to error
+                    self.state = .error(error.localizedDescription)
                 }
             }, receiveValue: { repository in
                 print("ItemViewModel: Repos updated")

@@ -4,8 +4,7 @@ import Foundation
 /// A struct used to decode backend response.
 struct GHFullRepository: Codable, Identifiable {
     let id: Int
-    let full_name: String
-    let organization: String
+    let fullName: String
     let description: String?
     let homepage: String
     let favorites: Int
@@ -18,22 +17,19 @@ struct GHFullRepository: Codable, Identifiable {
     let language: String
     
     enum CodingKeys: String, CodingKey {
-        case id, description, homepage, language, organization
-        case full_name = "full_name"
+        case id, description, homepage, language, forks, watchers
+        case fullName = "full_name"
         case favorites = "stargazers_count"
-        case watchers = "watchers_count"
-        case forks = "forks_count"
-        case issues = "open_issues"
+        case issues = "open_issues_count"
         case createdAt = "created_at"
-        case updatedAt = "updatedAt"
+        case updatedAt = "updated_at"
         case pushedAt = "pushed_at"
     }
     
     // Initializer Used to create mock objects
     init(id: Int, full_name: String, organization: String, description: String?, homepage: String, favorites: Int, watchers: Int, forks: Int, issues: Int, createdAt: String, updatedAt: String, pushedAt: String, language: String) {
         self.id = id
-        self.full_name = full_name
-        self.organization = organization
+        self.fullName = full_name
         self.description = description
         self.homepage = homepage
         self.favorites = favorites

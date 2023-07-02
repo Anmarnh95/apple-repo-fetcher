@@ -6,26 +6,8 @@ struct MainView: View {
     @ObservedObject var viewModel: ListViewModel
     
     var body: some View {
-        VStack{
-            switch viewModel.appState {
-            case .loading:
-                loadingView
-            case .loaded:
-                LoadedView(repos: viewModel.repos, onRefresh: viewModel.startLoading)
-            case .error(let errorMessage):
-                ErrorView(message: errorMessage, title: "Apple Repositories")
-            }
-        }
-        .onAppear {
-            viewModel.startLoading()
-        }
-    }
-    
-    private var loadingView: some View {
-        VStack {
-            Spacer()
-            ProgressView()
-            Spacer()
+        LoadableView(viewModel: viewModel, errorTitle: "Apple Repositories") {
+            RepositoryListView(repos: viewModel.repos, onRefresh: viewModel.startLoading)
         }
     }
 }

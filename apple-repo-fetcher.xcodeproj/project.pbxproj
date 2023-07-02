@@ -11,13 +11,15 @@
 		80E22ACC2A5161B800F43D16 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACA2A515F3C00F43D16 /* ItemViewModel.swift */; };
 		80E22ACE2A51646F00F43D16 /* GHFullRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */; };
 		80E22AD02A5167A500F43D16 /* RepositoryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACF2A5167A500F43D16 /* RepositoryPageView.swift */; };
+		80E22AD22A517A1300F43D16 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD12A517A1300F43D16 /* LoadableView.swift */; };
+		80E22AD42A517B0800F43D16 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD32A517B0800F43D16 /* ViewModel.swift */; };
 		814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */; };
 		814A057A2A408FA0009C9EB4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05792A408FA0009C9EB4 /* MainView.swift */; };
 		814A057C2A408FA3009C9EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814A057B2A408FA3009C9EB4 /* Assets.xcassets */; };
 		814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */; };
 		814A05A82A4095A9009C9EB4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A72A4095A9009C9EB4 /* AppState.swift */; };
 		814A05AA2A40978E009C9EB4 /* GHListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05A92A40978E009C9EB4 /* GHListRepository.swift */; };
-		814A05AC2A409981009C9EB4 /* LoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AB2A409981009C9EB4 /* LoadedView.swift */; };
+		814A05AC2A409981009C9EB4 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AB2A409981009C9EB4 /* RepositoryListView.swift */; };
 		814A05AE2A4099EF009C9EB4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AD2A4099EF009C9EB4 /* ErrorView.swift */; };
 		814A05B02A409ABD009C9EB4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05AF2A409ABD009C9EB4 /* ListViewModel.swift */; };
 		8158E54E2A42FFE900ED5E03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54D2A42FFE900ED5E03 /* API.swift */; };
@@ -31,7 +33,7 @@
 		8158E55A2A43086A00ED5E03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54D2A42FFE900ED5E03 /* API.swift */; };
 		8158E55B2A43087800ED5E03 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E5582A43057500ED5E03 /* NetworkError.swift */; };
 		819C74962A41AE6B008162B0 /* ApplePublicReposAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74952A41AE6B008162B0 /* ApplePublicReposAPI.swift */; };
-		819C74982A41C646008162B0 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74972A41C646008162B0 /* RepositoryListView.swift */; };
+		819C74982A41C646008162B0 /* RepositoryListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74972A41C646008162B0 /* RepositoryListItemView.swift */; };
 		819C749B2A41CF14008162B0 /* MockRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C749A2A41CF14008162B0 /* MockRepositories.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		80E22ACA2A515F3C00F43D16 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFullRepository.swift; sourceTree = "<group>"; };
 		80E22ACF2A5167A500F43D16 /* RepositoryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPageView.swift; sourceTree = "<group>"; };
+		80E22AD12A517A1300F43D16 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		80E22AD32A517B0800F43D16 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-repo-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherApp.swift; sourceTree = "<group>"; };
 		814A05792A408FA0009C9EB4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -57,14 +61,14 @@
 		814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherTests.swift; sourceTree = "<group>"; };
 		814A05A72A4095A9009C9EB4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		814A05A92A40978E009C9EB4 /* GHListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHListRepository.swift; sourceTree = "<group>"; };
-		814A05AB2A409981009C9EB4 /* LoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedView.swift; sourceTree = "<group>"; };
+		814A05AB2A409981009C9EB4 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
 		814A05AD2A4099EF009C9EB4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		814A05AF2A409ABD009C9EB4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		8158E54D2A42FFE900ED5E03 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8158E54F2A43035200ED5E03 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		8158E5582A43057500ED5E03 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		819C74952A41AE6B008162B0 /* ApplePublicReposAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePublicReposAPI.swift; sourceTree = "<group>"; };
-		819C74972A41C646008162B0 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
+		819C74972A41C646008162B0 /* RepositoryListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListItemView.swift; sourceTree = "<group>"; };
 		819C749A2A41CF14008162B0 /* MockRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,9 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				814A05792A408FA0009C9EB4 /* MainView.swift */,
-				814A05AB2A409981009C9EB4 /* LoadedView.swift */,
-				819C74972A41C646008162B0 /* RepositoryListView.swift */,
+				814A05AB2A409981009C9EB4 /* RepositoryListView.swift */,
+				819C74972A41C646008162B0 /* RepositoryListItemView.swift */,
 				80E22ACF2A5167A500F43D16 /* RepositoryPageView.swift */,
+				80E22AD12A517A1300F43D16 /* LoadableView.swift */,
 				814A05AD2A4099EF009C9EB4 /* ErrorView.swift */,
 			);
 			path = Views;
@@ -143,6 +148,7 @@
 			children = (
 				814A05AF2A409ABD009C9EB4 /* ListViewModel.swift */,
 				80E22ACA2A515F3C00F43D16 /* ItemViewModel.swift */,
+				80E22AD32A517B0800F43D16 /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,15 +288,17 @@
 				814A05A82A4095A9009C9EB4 /* AppState.swift in Sources */,
 				8158E5512A43035700ED5E03 /* MockAPI.swift in Sources */,
 				814A05B02A409ABD009C9EB4 /* ListViewModel.swift in Sources */,
-				814A05AC2A409981009C9EB4 /* LoadedView.swift in Sources */,
+				814A05AC2A409981009C9EB4 /* RepositoryListView.swift in Sources */,
 				819C749B2A41CF14008162B0 /* MockRepositories.swift in Sources */,
 				814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */,
+				80E22AD42A517B0800F43D16 /* ViewModel.swift in Sources */,
 				814A05AA2A40978E009C9EB4 /* GHListRepository.swift in Sources */,
 				80E22AD02A5167A500F43D16 /* RepositoryPageView.swift in Sources */,
+				80E22AD22A517A1300F43D16 /* LoadableView.swift in Sources */,
 				8158E5592A43057500ED5E03 /* NetworkError.swift in Sources */,
 				819C74962A41AE6B008162B0 /* ApplePublicReposAPI.swift in Sources */,
 				80E22ACE2A51646F00F43D16 /* GHFullRepository.swift in Sources */,
-				819C74982A41C646008162B0 /* RepositoryListView.swift in Sources */,
+				819C74982A41C646008162B0 /* RepositoryListItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
