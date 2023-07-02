@@ -1,7 +1,7 @@
 import Foundation
 
 /// A struct used to decode backend response.
-struct GitRepository: Codable, Identifiable {
+struct GitHubRepository: Codable, Identifiable {
     let id: Int
     let name: String
     let description: String?
