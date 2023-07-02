@@ -11,7 +11,7 @@ struct LoadedView: View {
         if repos.isEmpty {
             Text("No available Repos")
         } else {
-            VStack {
+            NavigationStack {
                 HStack {
                     Text("Apple Repositories")
                         .font(.title)
@@ -21,8 +21,13 @@ struct LoadedView: View {
                 }
                 List {
                     ForEach(repos) { repo in
-                        ListItem(repository: repo)
+                        NavigationLink(value: repo) {
+                            ListItemView(repository: repo)
+                        }
                     }
+                }
+                .navigationDestination(for: GHListRepository.self){ repo in
+                    RepositoryPageView(viewModel:ItemViewModel(api: ApplePublicReposAPI(), repositoryName: repo.name) )
                 }
                 .refreshable {
                     onRefresh()
