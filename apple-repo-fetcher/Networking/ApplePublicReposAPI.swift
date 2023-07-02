@@ -2,7 +2,7 @@ import Foundation
 import Combine
  
 /// A class holding the relevant API call for fetching the GitRepositories from backend, decoding it into an array of GitRepositories.
-class ApplePublicReposAPI: API {
+final class ApplePublicReposAPI: API {
     
     /// Used to fetch public repository information from github apple repositories API. By success, an array of GitRepository is returned, by Failure, a NetworkError is thrown.
     func fetchRepositories() -> AnyPublisher<[GitRepository], NetworkError> {

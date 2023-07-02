@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-class MainViewModel: ObservableObject{
+final class MainViewModel: ObservableObject{
     
     var cancellableSet: Set<AnyCancellable> = []
     

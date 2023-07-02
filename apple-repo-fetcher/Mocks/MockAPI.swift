@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-class mockAPI:API {
+final class mockAPI:API {
     
     private var returnError: NetworkError = .decodingError
     private var returnValues: [GitRepository] = MockRepositories.mocks
