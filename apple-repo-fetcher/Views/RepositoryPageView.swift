@@ -8,11 +8,6 @@ struct RepositoryPageView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10){
-                HStack {
-                    Text(repo.fullName)
-                        .font(.largeTitle)
-                    Spacer()
-                }
                 Text(repo.description ?? "")
                 Divider()
                 Text("Language:  \(repo.language)")
@@ -25,23 +20,21 @@ struct RepositoryPageView: View {
             }
             .padding()
         }
+        .navigationTitle(repo.fullName)
     }
     
     var datesGrid: some View {
-        Grid(horizontalSpacing: 30, verticalSpacing: 5){
+        Grid(alignment: .leading,horizontalSpacing: 30, verticalSpacing: 5){
             GridRow{
                 Text("Created at:")
-                    .gridColumnAlignment(.leading)
                 Text(repo.createdAt)
             }
             GridRow {
                 Text("Last updated at:")
-                    .gridColumnAlignment(.leading)
                 Text(repo.updatedAt)
             }
             GridRow {
                 Text("Last pushed at:")
-                    .gridColumnAlignment(.leading)
                 Text(repo.pushedAt)
             }
         }

@@ -13,6 +13,7 @@
 		80E22AD02A5167A500F43D16 /* RepositoryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACF2A5167A500F43D16 /* RepositoryPageView.swift */; };
 		80E22AD22A517A1300F43D16 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD12A517A1300F43D16 /* LoadableView.swift */; };
 		80E22AD42A517B0800F43D16 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD32A517B0800F43D16 /* ViewModel.swift */; };
+		80E22ADB2A52310B00F43D16 /* DateStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ADA2A52310B00F43D16 /* DateStringFormatter.swift */; };
 		814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */; };
 		814A057C2A408FA3009C9EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814A057B2A408FA3009C9EB4 /* Assets.xcassets */; };
 		814A05892A408FA3009C9EB4 /* apple_repo_fetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A05882A408FA3009C9EB4 /* apple_repo_fetcherTests.swift */; };
@@ -52,6 +53,7 @@
 		80E22ACF2A5167A500F43D16 /* RepositoryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPageView.swift; sourceTree = "<group>"; };
 		80E22AD12A517A1300F43D16 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		80E22AD32A517B0800F43D16 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		80E22ADA2A52310B00F43D16 /* DateStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringFormatter.swift; sourceTree = "<group>"; };
 		814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-repo-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_repo_fetcherApp.swift; sourceTree = "<group>"; };
 		814A057B2A408FA3009C9EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80E22AD92A5230F100F43D16 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80E22ADA2A52310B00F43D16 /* DateStringFormatter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		814A056B2A408FA0009C9EB4 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		814A05762A408FA0009C9EB4 /* apple-repo-fetcher */ = {
 			isa = PBXGroup;
 			children = (
+				80E22AD92A5230F100F43D16 /* Utils */,
 				814A05772A408FA0009C9EB4 /* apple_repo_fetcherApp.swift */,
 				819C74992A41CEF4008162B0 /* Mocks */,
 				814A05A42A4094F9009C9EB4 /* Networking */,
@@ -281,6 +292,7 @@
 				8158E54E2A42FFE900ED5E03 /* API.swift in Sources */,
 				814A05AE2A4099EF009C9EB4 /* ErrorView.swift in Sources */,
 				80E22ACB2A515F3C00F43D16 /* ItemViewModel.swift in Sources */,
+				80E22ADB2A52310B00F43D16 /* DateStringFormatter.swift in Sources */,
 				814A05A82A4095A9009C9EB4 /* AppState.swift in Sources */,
 				8158E5512A43035700ED5E03 /* MockAPI.swift in Sources */,
 				814A05B02A409ABD009C9EB4 /* ListViewModel.swift in Sources */,

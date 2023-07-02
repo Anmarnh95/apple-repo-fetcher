@@ -41,4 +41,20 @@ struct GHFullRepository: Codable, Identifiable {
         self.pushedAt = pushedAt
         self.language = language
     }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.description = try container.decodeIfPresent(String.self, forKey: .description)
+        self.homepage = try container.decode(String.self, forKey: .homepage)
+        self.language = try container.decode(String.self, forKey: .language)
+        self.forks = try container.decode(Int.self, forKey: .forks)
+        self.watchers = try container.decode(Int.self, forKey: .watchers)
+        self.fullName = try container.decode(String.self, forKey: .fullName)
+        self.favorites = try container.decode(Int.self, forKey: .favorites)
+        self.issues = try container.decode(Int.self, forKey: .issues)
+        self.createdAt = try DateStringFormatter.format(inputDateString: container.decode(String.self, forKey: .createdAt))
+        self.updatedAt = try DateStringFormatter.format(inputDateString: container.decode(String.self, forKey: .updatedAt))
+        self.pushedAt = try DateStringFormatter.format(inputDateString: container.decode(String.self, forKey: .pushedAt))
+    }
 }

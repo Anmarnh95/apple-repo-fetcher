@@ -22,4 +22,13 @@ struct GHListRepository: Codable, Identifiable, Hashable {
         self.favorites = favorites
         self.createdAt = createdAt
     }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.description = try container.decodeIfPresent(String.self, forKey: .description)
+        self.favorites = try container.decode(Int.self, forKey: .favorites)
+        self.createdAt = try DateStringFormatter.format(inputDateString: container.decode(String.self, forKey: .createdAt), outputStringFormat: "MMMM dd, yyyy")
+    }
 }

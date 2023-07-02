@@ -16,6 +16,7 @@ struct RepositoryListView: View {
                     .navigationTitle("Apple Repositories")
             } else {
                 NavigationStack {
+
                     List {
                         ForEach(viewModel.repos) { repo in
                             NavigationLink(value: repo) {
@@ -23,6 +24,7 @@ struct RepositoryListView: View {
                             }
                         }
                     }
+                    .navigationTitle("Apple Repositories")
                     .navigationDestination(for: GHListRepository.self){ repo in
                         
                         let selectedViewModel = ItemViewModel(api: ApplePublicReposAPI(), repositoryName: repo.name)
@@ -40,7 +42,6 @@ struct RepositoryListView: View {
                     }
                     .listStyle(.plain)
                 }
-                .navigationTitle("Apple Repositories")
             }
         }
     }
