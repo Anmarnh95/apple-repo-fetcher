@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Used to describe an GitRepository instance, so it could be shown in the list in LoadedView.
-struct ListItemView: View {
+struct RepositoryListView: View {
     
     let repository: GHListRepository
     
@@ -35,9 +35,9 @@ struct ListItemView: View {
 
 struct ListEntry_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemView(repository: MockRepositories.mocks[1])
+        ListItemView(repository: Mocks.mockRepositoryList[1])
             .previewLayout(.fixed(width: 300, height: 70))
-        ListItemView(repository:MockRepositories.mocks[4])
+        ListItemView(repository:Mocks.mockRepositoryList[4])
             .previewLayout(.fixed(width: 300, height: 100))
     }
 }
