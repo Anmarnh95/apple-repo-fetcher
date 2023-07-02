@@ -21,7 +21,7 @@ struct LoadedView: View {
                 }
                 List {
                     ForEach(repos) { repo in
-                        ListEntry(repository: repo)
+                        ListItem(repository: repo)
                     }
                 }
                 .refreshable {
