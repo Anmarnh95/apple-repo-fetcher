@@ -11,15 +11,24 @@ struct LoadedView: View {
         if repos.isEmpty {
             Text("No available Repos")
         } else {
-            List {
-                ForEach(repos) { repo in
-                    ListEntry(repository: repo)
+            VStack {
+                HStack {
+                    Text("Apple Repositories")
+                        .font(.title)
+                        .bold()
+                        .padding()
+                    Spacer()
                 }
+                List {
+                    ForEach(repos) { repo in
+                        ListEntry(repository: repo)
+                    }
+                }
+                .refreshable {
+                    onRefresh()
+                }
+                .listStyle(.plain)
             }
-            .refreshable {
-                onRefresh()
-            }
-            .listStyle(.plain)
         }
     }
 }

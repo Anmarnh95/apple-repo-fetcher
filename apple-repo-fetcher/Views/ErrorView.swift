@@ -10,6 +10,13 @@ struct ErrorView: View {
     }
     var body: some View {
         VStack {
+            HStack {
+                Text("Apple Repositories")
+                    .font(.title)
+                    .bold()
+                    .padding()
+                Spacer()
+            }
             Spacer()
             Text(errorMessage)
             Spacer()

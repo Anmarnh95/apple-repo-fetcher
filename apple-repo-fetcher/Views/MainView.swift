@@ -7,14 +7,6 @@ struct MainView: View {
     
     var body: some View {
         VStack{
-            HStack {
-                Text("Apple Repositories")
-                    .font(.title)
-                    .bold()
-                    .padding()
-                Spacer()
-            }
-            
             switch viewModel.appState {
             case .loading:
                 loadingView
