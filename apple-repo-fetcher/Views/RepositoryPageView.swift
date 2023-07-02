@@ -12,9 +12,9 @@ struct RepositoryPageView: View {
 
 struct RepositoryPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemView(repository: MockRepositories.mocks[1])
+        RepositoryListView(repository: Mocks.mockRepositoryList[1])
             .previewLayout(.fixed(width: 300, height: 70))
-        ListItemView(repository:MockRepositories.mocks[4])
+        RepositoryListView(repository:Mocks.mockRepositoryList[4])
             .previewLayout(.fixed(width: 300, height: 100))
     }
 }

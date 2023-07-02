@@ -31,7 +31,7 @@
 		8158E55A2A43086A00ED5E03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E54D2A42FFE900ED5E03 /* API.swift */; };
 		8158E55B2A43087800ED5E03 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158E5582A43057500ED5E03 /* NetworkError.swift */; };
 		819C74962A41AE6B008162B0 /* ApplePublicReposAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74952A41AE6B008162B0 /* ApplePublicReposAPI.swift */; };
-		819C74982A41C646008162B0 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74972A41C646008162B0 /* ListItemView.swift */; };
+		819C74982A41C646008162B0 /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C74972A41C646008162B0 /* RepositoryListView.swift */; };
 		819C749B2A41CF14008162B0 /* MockRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819C749A2A41CF14008162B0 /* MockRepositories.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,7 @@
 		8158E54F2A43035200ED5E03 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		8158E5582A43057500ED5E03 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		819C74952A41AE6B008162B0 /* ApplePublicReposAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePublicReposAPI.swift; sourceTree = "<group>"; };
-		819C74972A41C646008162B0 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		819C74972A41C646008162B0 /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
 		819C749A2A41CF14008162B0 /* MockRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +131,7 @@
 			children = (
 				814A05792A408FA0009C9EB4 /* MainView.swift */,
 				814A05AB2A409981009C9EB4 /* LoadedView.swift */,
-				819C74972A41C646008162B0 /* ListItemView.swift */,
+				819C74972A41C646008162B0 /* RepositoryListView.swift */,
 				80E22ACF2A5167A500F43D16 /* RepositoryPageView.swift */,
 				814A05AD2A4099EF009C9EB4 /* ErrorView.swift */,
 			);
@@ -290,7 +290,7 @@
 				8158E5592A43057500ED5E03 /* NetworkError.swift in Sources */,
 				819C74962A41AE6B008162B0 /* ApplePublicReposAPI.swift in Sources */,
 				80E22ACE2A51646F00F43D16 /* GHFullRepository.swift in Sources */,
-				819C74982A41C646008162B0 /* ListItemView.swift in Sources */,
+				819C74982A41C646008162B0 /* RepositoryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

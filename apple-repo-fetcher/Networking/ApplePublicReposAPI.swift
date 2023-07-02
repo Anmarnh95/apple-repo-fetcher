@@ -36,8 +36,8 @@ final class ApplePublicReposAPI: API {
             .eraseToAnyPublisher()
     }
     
-    func fetchRepositoryByName(name: String) -> AnyPublisher<[GHListRepository], NetworkError> {
-        let urlString = "https://api.github.com/orgs/apple/repos"
+    func fetchRepositoryByName(name: String) -> AnyPublisher<GHFullRepository, NetworkError> {
+        let urlString = "https://api.github.com/repos/apple/\(name)"
         guard let url = URL(string: urlString) else {
             print("GitHubAPI: Failed to parse URL")
             return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
@@ -46,8 +46,6 @@ final class ApplePublicReposAPI: API {
         var request = URLRequest(url: url)
         request.addValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
         request.addValue("2022-11-28", forHTTPHeaderField: "X-GitHub-Api-Version")
-        request.addValue("public", forHTTPHeaderField: "type")
-        request.addValue("full_name", forHTTPHeaderField: "sort")
         
         return URLSession.shared.dataTaskPublisher(for: request)
             .tryMap { data, response in
@@ -56,12 +54,12 @@ final class ApplePublicReposAPI: API {
                       httpResponse.statusCode == 200 else {
                     throw NetworkError.invalidResponse
                 }
-                print("GitHubAPI: Repositories Loaded")
+                print("GitHubAPI: Reposiroty \(name) Loaded")
                 return data
             }
-            .decode(type: [GHListRepository].self, decoder: JSONDecoder())
+            .decode(type: GHFullRepository.self, decoder: JSONDecoder())
             .mapError { error -> NetworkError in
-                print("GitHubAPI: Error decoding repositories")
+                print("GitHubAPI: Error decoding the repository \(name)")
                 return NetworkError.decodingError
             }
             .eraseToAnyPublisher()

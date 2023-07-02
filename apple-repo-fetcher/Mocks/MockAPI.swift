@@ -4,7 +4,8 @@ import Combine
 final class mockAPI:API {
     
     private var returnError: NetworkError = .decodingError
-    private var returnValues: [GHListRepository] = MockRepositories.mocks
+    private var listReturn: [GHListRepository] = Mocks.mockRepositoryList
+    private var singleReturn: GHFullRepository = Mocks.mockRepository
     
     
     public var returnKind: neededReturnKind
@@ -18,7 +19,18 @@ final class mockAPI:API {
         case .error:
             return Fail(error: returnError).eraseToAnyPublisher()
         case .values:
-            return Just(returnValues)
+            return Just(listReturn)
+                .setFailureType(to: NetworkError.self)
+                .eraseToAnyPublisher()
+        }
+    }
+    
+    func fetchRepositoryByName(name: String) -> AnyPublisher<GHFullRepository, NetworkError> {
+        switch returnKind {
+        case .error:
+            return Fail(error: returnError).eraseToAnyPublisher()
+        case .values:
+            return Just(singleReturn)
                 .setFailureType(to: NetworkError.self)
                 .eraseToAnyPublisher()
         }

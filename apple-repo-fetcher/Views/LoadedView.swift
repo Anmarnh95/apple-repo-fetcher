@@ -10,19 +10,13 @@ struct LoadedView: View {
         
         if repos.isEmpty {
             Text("No available Repos")
+                .navigationTitle("Apple Repositories")
         } else {
             NavigationStack {
-                HStack {
-                    Text("Apple Repositories")
-                        .font(.title)
-                        .bold()
-                        .padding()
-                    Spacer()
-                }
                 List {
                     ForEach(repos) { repo in
                         NavigationLink(value: repo) {
-                            ListItemView(repository: repo)
+                            RepositoryListView(repository: repo)
                         }
                     }
                 }
@@ -34,12 +28,13 @@ struct LoadedView: View {
                 }
                 .listStyle(.plain)
             }
+            .navigationTitle("Apple Repositories")
         }
     }
 }
 
 struct LoadedView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadedView(repos: MockRepositories.mocks, onRefresh: {})
+        LoadedView(repos: Mocks.mockRepositoryList, onRefresh: {})
     }
 }

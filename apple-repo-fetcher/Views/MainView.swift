@@ -13,7 +13,7 @@ struct MainView: View {
             case .loaded:
                 LoadedView(repos: viewModel.repos, onRefresh: viewModel.startLoading)
             case .error(let errorMessage):
-                ErrorView(message: errorMessage)
+                ErrorView(message: errorMessage, title: "Apple Repositories")
             }
         }
         .onAppear {
