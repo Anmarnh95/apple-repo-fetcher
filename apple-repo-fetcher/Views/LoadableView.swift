@@ -4,7 +4,7 @@ import SwiftUI
 struct LoadableView<Content: View>: View {
     
     let content: () -> Content
-    let viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
     let errorTitle: String
     
     public init(viewModel: ViewModel, errorTitle: String, @ViewBuilder content: @escaping () -> Content) {

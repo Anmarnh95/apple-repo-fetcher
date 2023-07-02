@@ -1,44 +1,53 @@
 import SwiftUI
 
-/// LoadedView shows the list of GitRepository. 
+/// Main funciton of this view is choosing the right View dependend on the state AppState in the ListViewModel. It also shows the title "Apple Repositories" in all Views
+/// 
+/// LoadedView shows the list of GitRepository
+
 struct RepositoryListView: View {
     
-    var repos: [GHListRepository] = []
     var onRefresh: ()->Void = {}
+    @ObservedObject var viewModel: ListViewModel
     
     var body: some View {
-        
-        if repos.isEmpty {
-            Text("No available Repos")
-                .navigationTitle("Apple Repositories")
-        } else {
-            NavigationStack {
-                List {
-                    ForEach(repos) { repo in
-                        NavigationLink(value: repo) {
-                            RepositoryListItemView(repository: repo)
+        LoadableView(viewModel: viewModel, errorTitle: "Apple Repositories") {
+            if viewModel.repos.isEmpty {
+                Text("No available Repos")
+                    .navigationTitle("Apple Repositories")
+            } else {
+                NavigationStack {
+                    List {
+                        ForEach(viewModel.repos) { repo in
+                            NavigationLink(value: repo) {
+                                RepositoryListItemView(repository: repo)
+                            }
                         }
                     }
-                }
-                .navigationDestination(for: GHListRepository.self){ repo in
-                    let itemViewModel = ItemViewModel(api: ApplePublicReposAPI(), repositoryName: repo.name)
-                    
-                    LoadableView(viewModel: itemViewModel, errorTitle: "\(repo.name)"){
-                        RepositoryPageView(repository: itemViewModel.repository!)
+                    .navigationDestination(for: GHListRepository.self){ repo in
+                        
+                        let selectedViewModel = ItemViewModel(api: ApplePublicReposAPI(), repositoryName: repo.name)
+                        LoadableView(viewModel: selectedViewModel, errorTitle: "\(repo.name)"){
+                            if let repository = selectedViewModel.repository {
+                                RepositoryPageView(repo: repository)
+                            } else {
+                                ErrorView(message: "Error loading Repository Page", title: repo.name)
+                            }
+                            
+                        }
                     }
+                    .refreshable {
+                        onRefresh()
+                    }
+                    .listStyle(.plain)
                 }
-                .refreshable {
-                    onRefresh()
-                }
-                .listStyle(.plain)
+                .navigationTitle("Apple Repositories")
             }
-            .navigationTitle("Apple Repositories")
         }
     }
 }
 
 struct LoadedView_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryListView(repos: Mocks.mockRepositoryList, onRefresh: {})
+        RepositoryListView(viewModel: ListViewModel(api: ApplePublicReposAPI()))
     }
 }

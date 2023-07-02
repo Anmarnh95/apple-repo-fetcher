@@ -1,12 +1,11 @@
 import Foundation
 import Combine
 
-final class ItemViewModel: ObservableObject, ViewModel {
+final class ItemViewModel: ViewModel {
     
     var cancellableSet: Set<AnyCancellable> = []
 
     @Published private(set) var repository: GHFullRepository? = nil
-    @Published public internal(set) var state: State
     
     private let api: API
     let repositoryName: String
@@ -15,10 +14,10 @@ final class ItemViewModel: ObservableObject, ViewModel {
     init(api: API, repositoryName: String) {
         self.repositoryName = repositoryName
         self.api = api
-        self.state = .loading
     }
     
-    public func startLoading() -> Void {
+    public override func startLoading() -> Void {
+        
         print("ItemViewModel: Will start loading")
         api.fetchRepositoryByName(name: self.repositoryName)
             .receive(on: DispatchQueue.main)

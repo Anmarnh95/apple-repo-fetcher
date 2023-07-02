@@ -4,7 +4,7 @@ import SwiftUI
 struct apple_repo_fetcherApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView(viewModel: ListViewModel(api: ApplePublicReposAPI()))
+            RepositoryListView(viewModel: ListViewModel(api: ApplePublicReposAPI()))
         }
     }
 }
