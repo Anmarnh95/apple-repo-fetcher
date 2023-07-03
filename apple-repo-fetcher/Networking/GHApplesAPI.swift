@@ -1,10 +1,10 @@
 import Foundation
 import Combine
  
-/// A class holding the relevant API call for fetching the GitRepositories from backend, decoding it into an array of GitRepositories.
+/// A class holding the relevant API call for fetching the github repositories of Apple from backend,.
 final class GHApplesAPI: API {
     
-    /// Used to fetch public repository information from github apple repositories API. By success, an array of GitRepository is returned, by Failure, a NetworkError is thrown.
+    /// Used to fetch public repository information from github apple repositories API. By success, an array of GHListRepository is returned, by Failure, a NetworkError is thrown.
     func fetchRepositories() -> AnyPublisher<[GHListRepository], NetworkError> {
         let urlString = "https://api.github.com/orgs/apple/repos"
         guard let url = URL(string: urlString) else {
@@ -36,6 +36,7 @@ final class GHApplesAPI: API {
             .eraseToAnyPublisher()
     }
     
+    /// Used to fetch a single  repository information from github apple repositories API. By success, a  of GHFulltRepository is returned, by Failure, a NetworkError is thrown. The repository is specified by the name variable.
     func fetchRepositoryByName(name: String) -> AnyPublisher<GHFullRepository, NetworkError> {
         let urlString = "https://api.github.com/repos/apple/\(name)"
         guard let url = URL(string: urlString) else {

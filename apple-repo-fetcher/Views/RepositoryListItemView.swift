@@ -1,6 +1,5 @@
 import SwiftUI
 
-/// Used to describe an GitRepository instance, so it could be shown in the list in LoadedView.
 struct RepositoryListItemView: View {
     
     let repository: GHListRepository

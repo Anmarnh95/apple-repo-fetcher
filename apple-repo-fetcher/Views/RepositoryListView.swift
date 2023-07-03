@@ -1,9 +1,5 @@
 import SwiftUI
 
-/// Main funciton of this view is choosing the right View dependend on the state AppState in the ListViewModel. It also shows the title "Apple Repositories" in all Views
-/// 
-/// LoadedView shows the list of GitRepository
-
 struct RepositoryListView: View {
     
     var onRefresh: ()->Void = {}

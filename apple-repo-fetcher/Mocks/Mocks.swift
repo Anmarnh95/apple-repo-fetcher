@@ -1,6 +1,5 @@
 import Foundation
 
-
 struct Mocks{
     
     /// A mock array of fake responses from the apple github API. It is availabe globally for testing.
@@ -12,6 +11,7 @@ struct Mocks{
         GHListRepository(id: 0, name: "Repository5", description: "I don't know what to say", favorites: 947, createdAt: "01.01.1900"),
     ]
     
+    /// A mock repository from the apple github API. It is availabe globally for testing.
     static public let mockRepository = GHFullRepository(id: 0,
                                                         full_name: "Test Repository",
                                                         organization: "Apple",

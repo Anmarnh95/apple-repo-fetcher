@@ -1,6 +1,9 @@
 import Foundation
 import Combine
 
+
+/// A fake API used for testing porposes.
+
 final class mockAPI:API {
     
     private var returnError: NetworkError = .decodingError

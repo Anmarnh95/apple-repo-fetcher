@@ -1,7 +1,5 @@
 import Foundation
 
-
-/// A struct used to decode backend response.
 struct GHFullRepository: Codable, Identifiable {
     let id: Int
     let fullName: String

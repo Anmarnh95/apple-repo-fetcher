@@ -9,12 +9,10 @@ final class RepositoryListViewModel: ViewModel{
         
     private let api: API
     
-    /// When the App starts, the initial state is "loading". When an array of GitRepository is successfully fetched from backend, the state will turn to "loaded".
     init(api: API) {
         self.api = api
     }
     
-    /// fetches the GitRepository objects from backend. In case of success, the repos array will be filed and the state will change to loaded. Otherwise it will turn the state to error alongside the error.
     public override func startLoading() -> Void{
         print("ListViewModel: Will start loading")
         api.fetchRepositories()

@@ -1,6 +1,7 @@
 import Foundation
 
-/// The state of the app is described by this enum. When the App starts, the initial state is "loading". When an array of GitRepository is successfully fetched from backend, the state will turn to "loaded". In case of failure, the state becomes error with an errorMessage.
+/// An enum that descripes a state.
+
 public enum State: Equatable {
     case loading
     case loaded
