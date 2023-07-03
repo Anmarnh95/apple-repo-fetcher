@@ -1,19 +1,19 @@
 import XCTest
 @testable import apple_repo_fetcher
 
-final class apple_repo_fetcherTests: XCTestCase {
+final class RepositoryListTests: XCTestCase {
 
     func testStartUpState() throws {
-        let viewModel = ListViewModel(api: mockAPI(returnKind: .values))
+        let viewModel = RepositoryListViewModel(api: mockAPI(returnKind: .values))
         XCTAssertEqual(viewModel.state, State.loading)
         XCTAssertTrue(viewModel.repos.isEmpty)
     }
     
     func testAfterFetchState() throws {
-        let viewModel = ListViewModel(api: mockAPI(returnKind: .values))
+        let viewModel = RepositoryListViewModel(api: mockAPI(returnKind: .values))
         viewModel.startLoading()
         let pred = NSPredicate { viewModel, _ in
-            ((viewModel as? ListViewModel)?.state) != State.loading
+            ((viewModel as? RepositoryListViewModel)?.state) != State.loading
             
         }
         let expectation = XCTNSPredicateExpectation(predicate: pred, object: viewModel)
@@ -23,10 +23,10 @@ final class apple_repo_fetcherTests: XCTestCase {
     }
     
     func testFailureState() throws {
-        let viewModel = ListViewModel(api: mockAPI(returnKind: .error))
+        let viewModel = RepositoryListViewModel(api: mockAPI(returnKind: .error))
         viewModel.startLoading()
         let pred = NSPredicate { viewModel, _ in
-            ((viewModel as? ListViewModel)?.state) != State.loading
+            ((viewModel as? RepositoryListViewModel)?.state) != State.loading
         }
         let expectation = XCTNSPredicateExpectation(predicate: pred, object: viewModel)
         self.wait(for: [expectation], timeout: 10)

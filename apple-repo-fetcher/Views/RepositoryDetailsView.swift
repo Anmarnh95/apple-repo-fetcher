@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-struct RepositoryPageView: View {
+struct RepositoryDetailsView: View {
     
     var repo: GHFullRepository
     
@@ -72,6 +72,6 @@ struct RepositoryPageView: View {
 
 struct RepositoryPageView_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryPageView(repo: Mocks.mockRepository)
+        RepositoryDetailsView(repo: Mocks.mockRepository)
     }
 }

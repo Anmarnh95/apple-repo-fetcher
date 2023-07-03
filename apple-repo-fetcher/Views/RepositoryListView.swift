@@ -7,7 +7,7 @@ import SwiftUI
 struct RepositoryListView: View {
     
     var onRefresh: ()->Void = {}
-    @ObservedObject var viewModel: ListViewModel
+    @ObservedObject var viewModel: RepositoryListViewModel
     
     var body: some View {
         LoadableView(viewModel: viewModel, errorTitle: "Apple Repositories") {
@@ -27,10 +27,10 @@ struct RepositoryListView: View {
                     .navigationTitle("Apple Repositories")
                     .navigationDestination(for: GHListRepository.self){ repo in
                         
-                        let selectedViewModel = ItemViewModel(api: ApplePublicReposAPI(), repositoryName: repo.name)
+                        let selectedViewModel = RepositoryDetailsViewModel(api: GHApplesAPI(), repositoryName: repo.name)
                         LoadableView(viewModel: selectedViewModel, errorTitle: "\(repo.name)"){
                             if let repository = selectedViewModel.repository {
-                                RepositoryPageView(repo: repository)
+                                RepositoryDetailsView(repo: repository)
                             } else {
                                 ErrorView(message: "Error loading Repository Page", title: repo.name)
                             }
@@ -49,6 +49,6 @@ struct RepositoryListView: View {
 
 struct LoadedView_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryListView(viewModel: ListViewModel(api: ApplePublicReposAPI()))
+        RepositoryListView(viewModel: RepositoryListViewModel(api: GHApplesAPI()))
     }
 }

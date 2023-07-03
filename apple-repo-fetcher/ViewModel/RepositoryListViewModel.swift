@@ -1,20 +1,16 @@
 import Foundation
 import Combine
 
-final class ListViewModel: ViewModel{
+final class RepositoryListViewModel: ViewModel{
     
     var cancellableSet: Set<AnyCancellable> = []
     
-//    @Published public internal(set) override var state: State
     @Published public private(set) var repos: [GHListRepository] = []
-    
-    @Published public var selectedItemViewModel: ItemViewModel? = nil
-    
+        
     private let api: API
     
     /// When the App starts, the initial state is "loading". When an array of GitRepository is successfully fetched from backend, the state will turn to "loaded".
     init(api: API) {
-//        self.state = .loading
         self.api = api
     }
     

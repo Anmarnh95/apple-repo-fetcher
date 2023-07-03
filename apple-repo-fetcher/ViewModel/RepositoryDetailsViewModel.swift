@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-final class ItemViewModel: ViewModel {
+final class RepositoryDetailsViewModel: ViewModel {
     
     var cancellableSet: Set<AnyCancellable> = []
 
