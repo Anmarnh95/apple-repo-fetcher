@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RepositoryListView: View {
     
+    /// An action, which will be executed the list is pulled down.
     var onRefresh: ()->Void = {}
     @ObservedObject var viewModel: RepositoryListViewModel
     

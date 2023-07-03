@@ -1,14 +1,20 @@
 import Foundation
 import Combine
 
-final class RepositoryListViewModel: ViewModel{
+/// A view model used by views which show a list of repositories reperented by an array GHListRepository.
+final class RepositoryListViewModel: LoadableViewModel{
     
-    var cancellableSet: Set<AnyCancellable> = []
-    
-    @Published public private(set) var repos: [GHListRepository] = []
-        
+    private var cancellableSet: Set<AnyCancellable> = []
     private let api: API
     
+    /// An array of GHListRepository which will be updated by startLoading()
+    @Published public private(set) var repos: [GHListRepository] = []
+    
+    /**
+     Initializes the RepositoryListViewModel
+     - Parameters:
+        - api: The api used to fetch the array of repositories
+     */
     init(api: API) {
         self.api = api
     }
@@ -36,5 +42,5 @@ final class RepositoryListViewModel: ViewModel{
             })
             .store(in: &cancellableSet)
     }
-
+    
 }

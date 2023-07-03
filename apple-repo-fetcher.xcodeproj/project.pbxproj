@@ -12,9 +12,9 @@
 		80E22ACE2A51646F00F43D16 /* GHFullRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */; };
 		80E22AD02A5167A500F43D16 /* RepositoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACF2A5167A500F43D16 /* RepositoryDetailsView.swift */; };
 		80E22AD22A517A1300F43D16 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD12A517A1300F43D16 /* LoadableView.swift */; };
-		80E22AD42A517B0800F43D16 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD32A517B0800F43D16 /* ViewModel.swift */; };
+		80E22AD42A517B0800F43D16 /* LoadableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD32A517B0800F43D16 /* LoadableViewModel.swift */; };
 		80E22ADB2A52310B00F43D16 /* DateStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ADA2A52310B00F43D16 /* DateStringFormatter.swift */; };
-		80E22ADC2A52EC5A00F43D16 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD32A517B0800F43D16 /* ViewModel.swift */; };
+		80E22ADC2A52EC5A00F43D16 /* LoadableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AD32A517B0800F43D16 /* LoadableViewModel.swift */; };
 		80E22ADD2A52ECA100F43D16 /* DateStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ADA2A52310B00F43D16 /* DateStringFormatter.swift */; };
 		80E22AE02A52ECB800F43D16 /* GHFullRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */; };
 		80E22AE22A52EE0000F43D16 /* RepositoryDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22AE12A52EE0000F43D16 /* RepositoryDetailsTests.swift */; };
@@ -56,7 +56,7 @@
 		80E22ACD2A51646F00F43D16 /* GHFullRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFullRepository.swift; sourceTree = "<group>"; };
 		80E22ACF2A5167A500F43D16 /* RepositoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsView.swift; sourceTree = "<group>"; };
 		80E22AD12A517A1300F43D16 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
-		80E22AD32A517B0800F43D16 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		80E22AD32A517B0800F43D16 /* LoadableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableViewModel.swift; sourceTree = "<group>"; };
 		80E22ADA2A52310B00F43D16 /* DateStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringFormatter.swift; sourceTree = "<group>"; };
 		80E22AE12A52EE0000F43D16 /* RepositoryDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsTests.swift; sourceTree = "<group>"; };
 		814A05742A408FA0009C9EB4 /* apple-repo-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-repo-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +162,7 @@
 			children = (
 				814A05AF2A409ABD009C9EB4 /* RepositoryListViewModel.swift */,
 				80E22ACA2A515F3C00F43D16 /* RepositoryDetailsViewModel.swift */,
-				80E22AD32A517B0800F43D16 /* ViewModel.swift */,
+				80E22AD32A517B0800F43D16 /* LoadableViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 				814A05AC2A409981009C9EB4 /* RepositoryListView.swift in Sources */,
 				819C749B2A41CF14008162B0 /* Mocks.swift in Sources */,
 				814A05782A408FA0009C9EB4 /* apple_repo_fetcherApp.swift in Sources */,
-				80E22AD42A517B0800F43D16 /* ViewModel.swift in Sources */,
+				80E22AD42A517B0800F43D16 /* LoadableViewModel.swift in Sources */,
 				814A05AA2A40978E009C9EB4 /* GHListRepository.swift in Sources */,
 				80E22AD02A5167A500F43D16 /* RepositoryDetailsView.swift in Sources */,
 				80E22AD22A517A1300F43D16 /* LoadableView.swift in Sources */,
@@ -321,7 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E22AE02A52ECB800F43D16 /* GHFullRepository.swift in Sources */,
-				80E22ADC2A52EC5A00F43D16 /* ViewModel.swift in Sources */,
+				80E22ADC2A52EC5A00F43D16 /* LoadableViewModel.swift in Sources */,
 				814A05892A408FA3009C9EB4 /* RepositoryListTests.swift in Sources */,
 				80E22ADD2A52ECA100F43D16 /* DateStringFormatter.swift in Sources */,
 				8158E55B2A43087800ED5E03 /* NetworkError.swift in Sources */,

@@ -1,5 +1,6 @@
 import Foundation
 
+/// A struct used to decode backend responses in  fetchRepositories() in classes implementing API protocol.
 struct GHListRepository: Codable, Identifiable, Hashable {
     let id: Int
     let name: String
@@ -13,15 +14,7 @@ struct GHListRepository: Codable, Identifiable, Hashable {
         case createdAt = "created_at"
     }
     
-    // Initializer Used to create mock objects
-    init(id: Int, name: String, description: String?, favorites: Int, createdAt: String) {
-        self.id = id
-        self.name = name
-        self.description = description
-        self.favorites = favorites
-        self.createdAt = createdAt
-    }
-    
+   
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
@@ -31,3 +24,23 @@ struct GHListRepository: Codable, Identifiable, Hashable {
         self.createdAt = try DateStringFormatter.format(inputDateString: container.decode(String.self, forKey: .createdAt), outputStringFormat: "MMMM dd, yyyy")
     }
 }
+
+#if DEBUG
+extension GHListRepository{
+    
+    // Initializer Used to create mock objects
+    init(id: Int,
+         name: String,
+         description: String?,
+         favorites: Int,
+         createdAt: String) {
+        
+        self.id = id
+        self.name = name
+        self.description = description
+        self.favorites = favorites
+        self.createdAt = createdAt
+    }
+    
+}
+#endif

@@ -1,16 +1,23 @@
 import Foundation
 import Combine
 
-final class RepositoryDetailsViewModel: ViewModel {
+/// A view model used by views which show details information about a repository.
+final class RepositoryDetailsViewModel: LoadableViewModel {
     
-    var cancellableSet: Set<AnyCancellable> = []
+    private var cancellableSet: Set<AnyCancellable> = []
+    private let api: API
+    private let repositoryName: String
 
+    /// An instance of GHFullRepository which will be updated by startLoading()
     @Published private(set) var repository: GHFullRepository? = nil
     
-    private let api: API
-    let repositoryName: String
     
-
+    /**
+     Initializes the RepositoryDetailsViewModel
+     - Parameters:
+        - api: The api used to fetch the details page
+        - repositoryName: The name of the repository which will be fetched.
+     */
     init(api: API, repositoryName: String) {
         self.repositoryName = repositoryName
         self.api = api

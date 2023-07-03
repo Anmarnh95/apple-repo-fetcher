@@ -6,8 +6,15 @@ struct ErrorView: View {
     private var errorMessage: String = "Unknown Error occured"
     private var title: String = "Error"
     
+    /**
+     Initializes the ErrorView
+     - Parameters:
+        - message: A message shown in the middle of the screen describing the error.
+        - title:A title for the ErrorView shown in the navigation bar.
+     */
     init(message: String, title: String) {
         self.errorMessage = message
+        self.title = title
     }
     var body: some View {
         VStack {
@@ -15,7 +22,7 @@ struct ErrorView: View {
             Text(errorMessage)
             Spacer()
         }
-        .navigationTitle("Apple Repositories")
+        .navigationTitle(title)
     }
 }
 

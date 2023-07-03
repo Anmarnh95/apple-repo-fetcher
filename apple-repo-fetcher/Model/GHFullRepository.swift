@@ -1,5 +1,6 @@
 import Foundation
 
+/// A struct used to decode backend responses in fetchRepositoryByName() in classes implementing API protocol.
 struct GHFullRepository: Codable, Identifiable {
     let id: Int
     let fullName: String
@@ -24,22 +25,6 @@ struct GHFullRepository: Codable, Identifiable {
         case pushedAt = "pushed_at"
     }
     
-    // Initializer Used to create mock objects
-    init(id: Int, full_name: String, organization: String, description: String?, homepage: String, favorites: Int, watchers: Int, forks: Int, issues: Int, createdAt: String, updatedAt: String, pushedAt: String, language: String) {
-        self.id = id
-        self.fullName = full_name
-        self.description = description
-        self.homepage = homepage
-        self.favorites = favorites
-        self.watchers = watchers
-        self.forks = forks
-        self.issues = issues
-        self.createdAt = createdAt
-        self.updatedAt = updatedAt
-        self.pushedAt = pushedAt
-        self.language = language
-    }
-    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
@@ -56,3 +41,39 @@ struct GHFullRepository: Codable, Identifiable {
         self.pushedAt = try DateStringFormatter.format(inputDateString: container.decode(String.self, forKey: .pushedAt))
     }
 }
+
+
+#if DEBUG
+extension GHFullRepository {
+    
+    // Initializer Used to create mock objects
+    init(id: Int,
+         full_name: String,
+         organization: String,
+         description: String?,
+         homepage: String,
+         favorites: Int,
+         watchers: Int,
+         forks: Int,
+         issues: Int,
+         createdAt: String,
+         updatedAt: String,
+         pushedAt: String,
+         language: String) {
+        
+        self.id = id
+        self.fullName = full_name
+        self.description = description
+        self.homepage = homepage
+        self.favorites = favorites
+        self.watchers = watchers
+        self.forks = forks
+        self.issues = issues
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+        self.pushedAt = pushedAt
+        self.language = language
+    }
+    
+}
+#endif
